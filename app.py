@@ -43,21 +43,89 @@ safety_grade = get_fact_value(facts_df, "Leapfrog safety grade")
 beds = get_fact_value(facts_df, "Hospital beds")
 
 # الشريط الجانبي للتطبيق
-st.sidebar.title("Project summary")
+st.sidebar.markdown("## 🏥 Dashboard Information")
+
+st.sidebar.info(
+    "Professional healthcare intelligence dashboard built using "
+    "official Medicare, CMS, Leapfrog, and Johns Hopkins public sources."
+)
+
+st.sidebar.markdown("### Data Governance Principles")
+
+st.sidebar.markdown(
+    """
+- Official public sources only
+- No patient-level data
+- Historical and current metrics separated
+- Source-verifiable facts only
+- Portfolio-safe healthcare analytics
+"""
+)
+
+st.sidebar.markdown("### Official Sources")
+
+for label, url in SOURCE_PAGES.items():
+    st.sidebar.markdown(f"- [{label}]({url})")
 st.sidebar.write("Dashboard built from source-verified public data only.")
 st.sidebar.markdown("### Official sources")
 for label, url in SOURCE_PAGES.items():
     st.sidebar.markdown(f"- [{label}]({url})")
 
 # العنوان الرئيسي والفرعي
-st.title(APP_TITLE)
-st.caption(APP_SUBTITLE)
+st.markdown(
+    """
+    <style>
+    .main-title {
+        font-size: 2.7rem;
+        font-weight: 800;
+        color: #002D72;
+        margin-bottom: 0rem;
+    }
 
-st.warning(
-    "Important: this app separates current public metrics from historical context. "
-    "It does not provide diagnosis, treatment advice, or patient-level prediction."
+    .subtitle {
+        font-size: 1.05rem;
+        color: #475569;
+        margin-bottom: 2rem;
+    }
+
+    .section-header {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0F172A;
+        margin-top: 1.5rem;
+    }
+
+    .info-box {
+        background-color: #EFF6FF;
+        padding: 1rem;
+        border-radius: 12px;
+        border-left: 6px solid #2563EB;
+        margin-bottom: 1rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
+st.markdown(
+    '<div class="main-title">Johns Hopkins Readmission & Quality Intelligence Dashboard</div>',
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    '<div class="subtitle">Source-verified healthcare quality, safety, and readmission intelligence dashboard built from official public U.S. sources.</div>',
+    unsafe_allow_html=True
+st.markdown(
+    """
+    <div class="info-box">
+    <strong>Professional disclosure:</strong><br>
+    This dashboard presents source-verified public healthcare quality information only.
+    It does not provide diagnosis, treatment recommendations, or patient-level prediction.
+    Historical metrics are clearly separated from current public indicators.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 # عرض معلومات أساسية باستخدام Mertic
 st.markdown("## Hospital overview")
 
@@ -119,10 +187,14 @@ with tabs[0]:
     )
     fig.update_traces(textposition="outside")
     fig.update_layout(
-        showlegend=False,
-        xaxis_title="",
-        yaxis_title="Number of measures",
-        margin=dict(l=20, r=20, t=60, b=20),
+    showlegend=False,
+    xaxis_title="",
+    yaxis_title="Number of measures",
+    margin=dict(l=20, r=20, t=60, b=20),
+    plot_bgcolor="white",
+    paper_bgcolor="white",
+    font=dict(size=14),
+    )
     )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -182,4 +254,12 @@ with tabs[3]:
         st.markdown(f"- [{label}]({url})")
 
 st.divider()
+st.markdown("---")
+
+st.caption(
+    "Johns Hopkins Readmission & Quality Intelligence Dashboard | "
+    "Built with Python, Streamlit, Pandas, and Plotly | "
+    "Source-verified public healthcare intelligence"
+)
+
 st.caption(data["disclaimer"])
