@@ -115,6 +115,8 @@ st.markdown(
 st.markdown(
     '<div class="subtitle">Source-verified healthcare quality, safety, and readmission intelligence dashboard built from official public U.S. sources.</div>',
     unsafe_allow_html=True
+)
+
 st.markdown(
     """
     <div class="info-box">
