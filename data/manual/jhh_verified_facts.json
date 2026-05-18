@@ -1,0 +1,136 @@
+{
+  "hospital_name": "The Johns Hopkins Hospital",
+  "ccn": "210009",
+  "city": "Baltimore",
+  "state": "Maryland",
+  "project_scope": "Source-verified hospital readmission and quality intelligence dashboard",
+  "readmission_distribution": {
+    "Above national average": 1,
+    "Same as national average": 6,
+    "Below national average": 3
+  },
+  "source_audit": [
+    {
+      "source": "Medicare Care Compare",
+      "category": "current_public_quality_data",
+      "as_of": "2026-05-13",
+      "freshness": "current",
+      "note": "Readmission measure mix shown for The Johns Hopkins Hospital; page shows data last updated May 13, 2026.",
+      "url": "https://www.medicare.gov/care-compare/details/hospital/210009/view-all?city=Baltimore&state=MD&zipcode="
+    },
+    {
+      "source": "CMS Hospital Readmissions Reduction Program (HRRP)",
+      "category": "federal_dataset_release",
+      "as_of": "2026-05-13",
+      "freshness": "current",
+      "note": "Dataset page shows Released May 13, 2026 and Last Modified January 26, 2026.",
+      "url": "https://data.cms.gov/provider-data/dataset/9n3s-kdb3"
+    },
+    {
+      "source": "Leapfrog Hospital Safety Grade",
+      "category": "current_public_safety_grade",
+      "as_of": "Spring 2026",
+      "freshness": "current",
+      "note": "The Johns Hopkins Hospital has grade B for Spring 2026.",
+      "url": "https://www.hospitalsafetygrade.org/h/the-johns-hopkins-hospital"
+    },
+    {
+      "source": "Johns Hopkins Medicine Fast Facts",
+      "category": "institutional_context",
+      "as_of": "August 2023",
+      "freshness": "official_historical",
+      "note": "Licensed acute care beds including pediatric beds.",
+      "url": "https://www.hopkinsmedicine.org/-/media/jhm/documents/entity-fact-sheets/jhm-fast-facts.pdf"
+    },
+    {
+      "source": "Johns Hopkins News: Interventions Reduce Unnecessary Readmissions",
+      "category": "historical_impact",
+      "as_of": "2016",
+      "freshness": "historical_case_study",
+      "note": "Reported 12.66% reduction in readmissions and $1.4M in avoided hospitalizations in 2016.",
+      "url": "https://www.hopkinsmedicine.org/news/articles/2018/08/interventions-reduce-unnecessary-readmissions"
+    },
+    {
+      "source": "Johns Hopkins Readmissions",
+      "category": "program_description",
+      "as_of": "Source page used for program descriptions",
+      "freshness": "source_verified_program_page",
+      "note": "Describes transition guides and Patient Access Line programs.",
+      "url": "https://www.hopkinsmedicine.org/patient-safety/readmissions"
+    }
+  ],
+  "verified_facts": [
+    {
+      "category": "readmission",
+      "label": "Readmission measure distribution",
+      "value": "1 above / 6 same / 3 below national average",
+      "detail": "Across readmission measures shown on Medicare Care Compare for The Johns Hopkins Hospital.",
+      "as_of": "2026-05-13",
+      "freshness": "current",
+      "source_url": "https://www.medicare.gov/care-compare/details/hospital/210009/view-all?city=Baltimore&state=MD&zipcode="
+    },
+    {
+      "category": "governance",
+      "label": "Latest federal public quality update used in this app",
+      "value": "2026-05-13",
+      "detail": "Based on Medicare Care Compare visible update date and CMS HRRP release date.",
+      "as_of": "2026-05-13",
+      "freshness": "current",
+      "source_url": "https://data.cms.gov/provider-data/dataset/9n3s-kdb3"
+    },
+    {
+      "category": "safety",
+      "label": "Leapfrog safety grade",
+      "value": "B",
+      "detail": "Spring 2026 public safety grade.",
+      "as_of": "Spring 2026",
+      "freshness": "current",
+      "source_url": "https://www.hospitalsafetygrade.org/h/the-johns-hopkins-hospital"
+    },
+    {
+      "category": "operations",
+      "label": "Hospital beds",
+      "value": "1,146",
+      "detail": "Licensed acute care beds (including 204 pediatric beds) from Johns Hopkins Fast Facts.",
+      "as_of": "2023-08",
+      "freshness": "official_historical",
+      "source_url": "https://www.hopkinsmedicine.org/-/media/jhm/documents/entity-fact-sheets/jhm-fast-facts.pdf"
+    },
+    {
+      "category": "intervention",
+      "label": "Historical readmission reduction",
+      "value": "12.66%",
+      "detail": "Reported by Johns Hopkins for 2016.",
+      "as_of": "2016",
+      "freshness": "historical_case_study",
+      "source_url": "https://www.hopkinsmedicine.org/news/articles/2018/08/interventions-reduce-unnecessary-readmissions"
+    },
+    {
+      "category": "intervention",
+      "label": "Historical avoided hospitalizations value",
+      "value": "$1.4 million",
+      "detail": "Reported by Johns Hopkins for 2016.",
+      "as_of": "2016",
+      "freshness": "historical_case_study",
+      "source_url": "https://www.hopkinsmedicine.org/news/articles/2018/08/interventions-reduce-unnecessary-readmissions"
+    }
+  ],
+  "official_interventions": [
+    {
+      "name": "Transition Guides",
+      "summary": "Transition guides meet patients in the hospital and visit them at home for up to 30 days after discharge【40†L164-L168】.",
+      "source_url": "https://www.hopkinsmedicine.org/patient-safety/readmissions"
+    },
+    {
+      "name": "Patient Access Line (PAL)",
+      "summary": "Eligible patients receive a follow-up phone call from a nurse within two days after discharge【40†L176-L179】.",
+      "source_url": "https://www.hopkinsmedicine.org/patient-safety/readmissions"
+    },
+    {
+      "name": "After-Care Clinic",
+      "summary": "Clinic for high-risk patients that reduced readmissions and saved about $1.4M in 2016【39†L99-L100】.",
+      "source_url": "https://www.hopkinsmedicine.org/news/articles/2018/08/interventions-reduce-unnecessary-readmissions"
+    }
+  ],
+  "disclaimer": "This dashboard summarizes publicly available institutional quality and safety information. It does not provide diagnosis, treatment advice, or patient-level prediction."
+    }
