@@ -16,7 +16,6 @@ st.set_page_config(
     page_icon="🏥",
     layout="wide",
    import sys; sys.path.append(".")
-``` 
 )
 
 # تحميل البيانات مع معالجة الأخطاء
